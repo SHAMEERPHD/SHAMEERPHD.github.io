@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shameerddin Shaik - Edge-AI & Smart Grid Researcher</title>
+    <meta name="description" content="PhD Scholar researching Edge-AI for Self-Healing Microgrids at VIT Chennai. 15+ years experience in power systems and STEM education.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .animate-slideInLeft {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+        
+        .animate-slideInRight {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+        
+        .workflow-node {
+            transition: all 0.3s ease;
+        }
+        
+        .workflow-node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .section-appear {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .section-appear.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .arrow {
+            position: relative;
+        }
+        
+        .arrow::after {
+            content: '→';
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #667eea;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .arrow::after {
+                content: '↓';
+                right: 50%;
+                top: auto;
+                bottom: -30px;
+                transform: translateX(50%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Shameerddin Shaik</h1>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about" class="hover:text-gray-200 transition">About</a>
+                    <a href="#research" class="hover:text-gray-200 transition">Research</a>
+                    <a href="#developments" class="hover:text-gray-200 transition">Recent Developments</a>
+                    <a href="#workflow" class="hover:text-gray-200 transition">Work Structure</a>
+                    <a href="#projects" class="hover:text-gray-200 transition">Projects</a>
+                    <a href="#contact" class="hover:text-gray-200 transition">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden gradient-bg text-white px-6 py-4 md:hidden">
+        <a href="#about" class="block py-2 hover:text-gray-200">About</a>
+        <a href="#research" class="block py-2 hover:text-gray-200">Research</a>
+        <a href="#developments" class="block py-2 hover:text-gray-200">Recent Developments</a>
+        <a href="#workflow" class="block py-2 hover:text-gray-200">Work Structure</a>
+        <a href="#projects" class="block py-2 hover:text-gray-200">Projects</a>
+        <a href="#contact" class="block py-2 hover:text-gray-200">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="animate-fadeInUp">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Shameerddin Shaik</h1>
+                <p class="text-2xl md:text-3xl mb-6">PhD Scholar (Upcoming) | Edge-AI & Smart Grid Researcher</p>
+                <p class="text-xl mb-4">VIT Chennai | Supervisor: Dr. Aravind C K</p>
+                <p class="text-lg max-w-3xl mx-auto">
+                    Specializing in Edge-AI for Self-Healing Microgrids: Real-Time Fault Detection, Load Forecasting & Autonomous Energy Management
+                </p>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="#contact" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Get in Touch</a>
+                    <a href="#research" class="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition">View Research</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white section-appear">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">About Me</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-lg shadow-lg">
+                    <p class="text-lg leading-relaxed text-gray-700 mb-4">
+                        Researcher and engineer with <strong>15+ years of combined industry and teaching experience</strong>, now pursuing PhD focused on Edge-AI for self-healing microgrids. Passionate about bridging the gap between theoretical AI research and practical deployment on low-cost edge hardware.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        Currently building expertise in <strong>federated learning, Physics-Informed Neural Networks (PINNs)</strong>, and model compression for real-time power system applications. Committed to advancing sustainable energy solutions through cutting-edge artificial intelligence.
+                    </p>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
+                    <div class="text-center p-6 bg-purple-50 rounded-lg">
+                        <div class="text-4xl font-bold gradient-text">15+</div>
+                        <div class="text-gray-600 mt-2">Years Experience</div>
+                    </div>
+                    <div class="text-center p-6 bg-purple-50 rounded-lg">
+                        <div class="text-4xl font-bold gradient-text">1000+</div>
+                        <div class="text-gray-600 mt-2">Students Taught</div>
+                    </div>
+                    <div class="text-center p-6 bg-purple-50 rounded-lg">
+                        <div class="text-4xl font-bold gradient-text">5+</div>
+                        <div class="text-gray-600 mt-2">Years in Industry</div>
+                    </div>
+                    <div class="text-center p-6 bg-purple-50 rounded-lg">
+                        <div class="text-4xl font-bold gradient-text">1</div>
+                        <div class="text-gray-600 mt-2">IEEE Publication</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Focus -->
+    <section id="research" class="py-16 bg-gray-50 section-appear">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Research Focus</h2>
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-xl">
+                    <h3 class="text-3xl font-bold text-purple-600 mb-4">Edge-AI for Self-Healing Microgrids</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Developing intelligent systems for real-time fault detection, load forecasting, and autonomous energy management in microgrids using edge computing and artificial intelligence. Focus on deploying advanced deep learning models on resource-constrained edge devices for practical smart grid applications.
+                    </p>
+                    
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4 mt-8">Key Research Interests</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                            <div>
+                                <h5 class="font-semibold text-gray-800">Privacy-Preserving Federated Learning</h5>
+                                <p class="text-gray-600 text-sm">Distributed learning for power systems without centralizing sensitive data</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                            <div>
+                                <h5 class="font-semibold text-gray-800">Physics-Informed Neural Networks (PINNs)</h5>
+                                <p class="text-gray-600 text-sm">Embedding physical laws into neural network training</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                            <div>
+                                <h5 class="font-semibold text-gray-800">Edge AI Deployment</h5>
+                                <p class="text-gray-600 text-sm">Low-cost hardware (Raspberry Pi, NVIDIA Jetson)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                            <div>
+                                <h5 class="font-semibold text-gray-800">Smart Grid Fault Detection</h5>
+                                <p class="text-gray-600 text-sm">Real-time anomaly detection and self-healing mechanisms</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                            <div>
+                                <h5 class="font-semibold text-gray-800">Load Forecasting</h5>
+                                <p class="text-gray-600 text-sm">LSTM and Transformer-based prediction models</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Developments Timeline -->
+    <section id="developments" class="py-16 bg-white section-appear">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Recent Developments (2024-2025)</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                Latest breakthroughs in Edge-AI for self-healing microgrids, federated learning, and physics-informed neural networks
+            </p>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="relative border-l-4 border-purple-600 ml-4">
+                    <!-- Timeline Item 1 -->
+                    <div class="mb-10 ml-8 relative timeline-item">
+                        <div class="bg-purple-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2025 July</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">FOGNITE Fog-Cloud Architecture</h3>
+                            <p class="text-gray-700 mb-3">
+                                Integrates federated learning, reinforcement learning, and hierarchical digital-twin validation at fog/edge nodes, achieving substantial improvements in load balancing and energy waste reduction on Raspberry Pi testbeds.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-xs">Federated Learning</span>
+                                <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-xs">Edge Computing</span>
+                                <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-xs">Digital Twin</span>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <strong>Impact:</strong> Scalable fog-edge design for autonomous, privacy-preserving grid intelligence with validated load-balancing accuracy
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="mb-10 ml-8 relative timeline-item">
+                        <div class="bg-purple-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2025 March</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">PINN-Digital Twin Hybrid Framework</h3>
+                            <p class="text-gray-700 mb-3">
+                                Fuses physics-informed neural networks with digital twins and blockchain for secure, high-accuracy energy optimization in smart buildings, reporting strong predictive metrics and energy-cost improvements.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-xs">PINN</span>
+                                <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-xs">Digital Twin</span>
+                                <span class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-xs">Blockchain</span>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <strong>Impact:</strong> Combines physical model fidelity with secure coordination for accurate, trustworthy edge-deployed energy optimization
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="mb-10 ml-8 relative timeline-item">
+                        <div class="bg-purple-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2024 December</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">FedTRPO for Net-Zero Microgrids</h3>
+                            <p class="text-gray-700 mb-3">
+                                Combines federated learning with Trust Region Policy Optimization (TRPO) to enable privacy-preserving policy optimization across heterogeneous building/microgrid agents.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-xs">Federated RL</span>
+                                <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-xs">TRPO</span>
+                                <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-xs">Privacy-Preserving</span>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <strong>Impact:</strong> Federated RL route to generalize control policies across distributed energy nodes while maintaining privacy
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="mb-10 ml-8 relative timeline-item">
+                        <div class="bg-purple-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2024 September</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">AI-Driven Wind-PV-Battery Microgrid Control</h3>
+                            <p class="text-gray-700 mb-3">
+                                Advanced energy-flow management and power-quality control using hybrid AI and multi-agent approaches for renewable-rich microgrids.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-xs">Hybrid AI</span>
+                                <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-xs">Multi-Agent</span>
+                                <span class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-xs">Renewables</span>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <strong>Impact:</strong> Improved power-quality metrics and operational robustness in renewable-rich microgrids
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 5 -->
+                    <div class="mb-10 ml-8 relative timeline-item">
+                        <div class="bg-purple-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2024 July</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Physics-Informed Cyber Anomaly Detection</h3>
+                            <p class="text-gray-700 mb-3">
+                                Physics-informed convolutional autoencoder for cyber anomaly detection in distribution grids, fusing physical constraints with representation learning.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-xs">PINN</span>
+                                <span class="bg-red-200 text-red-800 px-3 py-1 rounded-full text-xs">Cyber Security</span>
+                                <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-xs">Autoencoder</span>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <strong>Impact:</strong> Improved cyber-anomaly detection accuracy by enforcing physics consistency in learned representations
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 6 -->
+                    <div class="mb-10 ml-8 relative timeline-item">
+                        <div class="bg-purple-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2024 June</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Digital Twin-Based Smart Grid Prototype</h3>
+                            <p class="text-gray-700 mb-3">
+                                Integrates IoT sensing, real-time monitoring, and control elements to support smarter microgrid operations and experimentation on self-healing behaviors.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-xs">Digital Twin</span>
+                                <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-xs">IoT</span>
+                                <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-xs">Real-Time</span>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <strong>Impact:</strong> Practical testbed approach for validating edge-AI control and self-healing strategies
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 7 -->
+                    <div class="mb-10 ml-8 relative timeline-item">
+                        <div class="bg-purple-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2024 May</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Federated Deep Q-Network for Microgrids</h3>
+                            <p class="text-gray-700 mb-3">
+                                Applies federated learning to DQN training to preserve local privacy while converging to effective policies for multi-microgrid energy management.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-xs">Federated Learning</span>
+                                <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-xs">DQN</span>
+                                <span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-xs">Privacy</span>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <strong>Impact:</strong> Privacy-preserving distributed policy learning with rapid convergence in case studies
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 8 -->
+                    <div class="mb-10 ml-8 relative timeline-item">
+                        <div class="bg-purple-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2024 April</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Physics-Informed CNN for Economic Dispatch</h3>
+                            <p class="text-gray-700 mb-3">
+                                Embeds economic dispatch constraints into CNN training to accelerate real-time dispatch while respecting physical laws.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-xs">PINN</span>
+                                <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-xs">CNN</span>
+                                <span class="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-xs">Optimization</span>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <strong>Impact:</strong> Faster real-time economic dispatch without sacrificing numerical-optimization accuracy
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Structure / Workflow -->
+    <section id="workflow" class="py-16 bg-gray-50 section-appear">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Research Work Structure</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                My systematic approach to Edge-AI research for self-healing microgrids
+            </p>
+            
+            <div class="max-w-6xl mx-auto">
+                <!-- Workflow Diagram -->
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-6 mb-12">
+                    <!-- Step 1 -->
+                    <div class="workflow-node bg-white p-6 rounded-lg shadow-lg text-center arrow">
+                        <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-database text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Data Collection</h3>
+                        <p class="text-sm text-gray-600">Smart grid sensors, IoT devices, historical power data</p>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="workflow-node bg-white p-6 rounded-lg shadow-lg text-center arrow">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-microchip text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Edge Processing</h3>
+                        <p class="text-sm text-gray-600">Raspberry Pi, NVIDIA Jetson for local computation</p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="workflow-node bg-white p-6 rounded-lg shadow-lg text-center arrow">
+                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-brain text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">AI Model</h3>
+                        <p class="text-sm text-gray-600">PINN, Federated Learning, LSTM/Transformers</p>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="workflow-node bg-white p-6 rounded-lg shadow-lg text-center arrow">
+                        <div class="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-chart-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Analysis</h3>
+                        <p class="text-sm text-gray-600">Fault detection, load forecasting, anomaly detection</p>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="workflow-node bg-white p-6 rounded-lg shadow-lg text-center">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cogs text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Action</h3>
+                        <p class="text-sm text-gray-600">Autonomous control, self-healing, optimization</p>
+                    </div>
+                </div>
+
+                <!-- Research Methodology -->
+                <div class="bg-white p-8 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Research Methodology</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-purple-600 pl-4">
+                            <h4 class="font-bold text-lg text-gray-800 mb-2">1. Physics-Informed Neural Networks (PINNs)</h4>
+                            <p class="text-gray-700">
+                                Embedding physical laws and constraints from power systems directly into neural network training to ensure predictions respect fundamental physics principles. This improves model reliability and reduces training data requirements.
+                            </p>
+                        </div>
+                        
+                        <div class="border-l-4 border-blue-600 pl-4">
+                            <h4 class="font-bold text-lg text-gray-800 mb-2">2. Federated Learning Approach</h4>
+                            <p class="text-gray-700">
+                                Distributed learning across multiple microgrids without centralizing sensitive operational data. Each edge device trains locally, sharing only model updates to preserve privacy while achieving collective intelligence.
+                            </p>
+                        </div>
+                        
+                        <div class="border-l-4 border-green-600 pl-4">
+                            <h4 class="font-bold text-lg text-gray-800 mb-2">3. Edge Deployment Strategy</h4>
+                            <p class="text-gray-700">
+                                Model compression and optimization for deployment on low-cost hardware (Raspberry Pi, NVIDIA Jetson). Focus on real-time inference with minimal latency for critical fault detection and control decisions.
+                            </p>
+                        </div>
+                        
+                        <div class="border-l-4 border-yellow-600 pl-4">
+                            <h4 class="font-bold text-lg text-gray-800 mb-2">4. Self-Healing Mechanisms</h4>
+                            <p class="text-gray-700">
+                                Autonomous fault detection, isolation, and recovery systems using reinforcement learning and deep learning. Integration with digital twins for simulation and validation before real-world deployment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Tools -->
+    <section class="py-16 bg-white section-appear">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Skills & Tools</h2>
+            
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- AI/ML -->
+                <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-robot text-purple-600 mr-3"></i>
+                        AI & Machine Learning
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">TensorFlow</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">PyTorch</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Keras</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Scikit-learn</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">LSTM</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Transformers</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Reinforcement Learning</span>
+                    </div>
+                </div>
+                
+                <!-- Edge Computing -->
+                <div class="bg-gradient-to-br from-blue-50 to-green-50 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-microchip text-blue-600 mr-3"></i>
+                        Edge Computing
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Raspberry Pi</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">NVIDIA Jetson</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">TensorFlow Lite</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Edge TPU</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Model Compression</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Quantization</span>
+                    </div>
+                </div>
+                
+                <!-- Power Systems -->
+                <div class="bg-gradient-to-br from-green-50 to-yellow-50 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-bolt text-green-600 mr-3"></i>
+                        Power Systems
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">MATLAB/Simulink</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">PSCAD</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Microgrid Design</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Power Electronics</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Load Forecasting</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Fault Detection</span>
+                    </div>
+                </div>
+                
+                <!-- Programming -->
+                <div class="bg-gradient-to-br from-yellow-50 to-red-50 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-code text-yellow-600 mr-3"></i>
+                        Programming
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Python</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">MATLAB</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">C/C++</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Git</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Linux</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Jupyter</span>
+                    </div>
+                </div>
+                
+                <!-- Data & Visualization -->
+                <div class="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-chart-bar text-red-600 mr-3"></i>
+                        Data & Visualization
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Pandas</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">NumPy</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Matplotlib</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Seaborn</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Plotly</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">SQL</span>
+                    </div>
+                </div>
+                
+                <!-- Research Tools -->
+                <div class="bg-gradient-to-br from-pink-50 to-purple-50 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-flask text-pink-600 mr-3"></i>
+                        Research Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">LaTeX</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Overleaf</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Zotero</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">Google Scholar</span>
+                        <span class="skill-badge bg-white px-3 py-1 rounded-full text-sm shadow">IEEE Xplore</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Experience -->
+    <section id="projects" class="py-16 bg-gray-50 section-appear">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Projects & Experience</h2>
+            
+            <div class="max-w-5xl mx-auto space-y-8">
+                <!-- Current Projects -->
+                <div class="bg-white p-8 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-project-diagram text-purple-600 mr-3"></i>
+                        Current Projects
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-purple-600 pl-4">
+                            <h4 class="font-bold text-lg text-gray-800">Literature Review: Hybrid Deep Learning for Microgrid Fault Detection</h4>
+                            <p class="text-gray-600 mt-2">
+                                Comprehensive review of state-of-the-art hybrid deep learning models combining CNNs, LSTMs, and attention mechanisms for real-time fault detection in microgrids. Focus on edge-deployable architectures.
+                            </p>
+                        </div>
+                        
+                        <div class="border-l-4 border-blue-600 pl-4">
+                            <h4 class="font-bold text-lg text-gray-800">GitHub Portfolio: LSTM-Based Load Forecasting Models</h4>
+                            <p class="text-gray-600 mt-2">
+                                Building practical implementations of LSTM and Transformer-based load forecasting models with real-world datasets. Includes model compression techniques for edge deployment.
+                            </p>
+                        </div>
+                        
+                        <div class="border-l-4 border-green-600 pl-4">
+                            <h4 class="font-bold text-lg text-gray-800">German Language Preparation (B1 Target by 2027)</h4>
+                            <p class="text-gray-600 mt-2">
+                                Pursuing German language proficiency for potential international research collaborations and opportunities in European energy research institutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Experience -->
+                <div class="bg-white p-8 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-briefcase text-blue-600 mr-3"></i>
+                        Professional Experience
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-industry text-purple-600"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg text-gray-800">QA&C Engineer</h4>
+                                <p class="text-purple-600 font-semibold">BGR Energy Systems | 5+ Years</p>
+                                <p class="text-gray-600 mt-2">
+                                    Quality Assurance and Control engineering in thermal power plant projects. Ensured compliance with industry standards and operational excellence across multiple large-scale energy projects.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Thermal Power Plants</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Quality Control</span>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Project Management</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-chalkboard-teacher text-blue-600"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg text-gray-800">Physics & STEM Educator</h4>
+                                <p class="text-blue-600 font-semibold">10+ Years | 1000+ Students</p>
+                                <p class="text-gray-600 mt-2">
+                                    Extensive teaching experience in Physics and STEM subjects. Mentored over 1000 students, fostering scientific thinking, problem-solving skills, and passion for engineering.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Physics Education</span>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">STEM</span>
+                                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Mentorship</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education & Publications -->
+                <div class="bg-white p-8 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-graduation-cap text-green-600 mr-3"></i>
+                        Education & Publications
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-green-600 pl-4">
+                            <h4 class="font-bold text-lg text-gray-800">PhD (Upcoming)</h4>
+                            <p class="text-green-600 font-semibold">VIT Chennai | Supervisor: Dr. Aravind C K</p>
+                            <p class="text-gray-600 mt-2">
+                                Focus: Edge-AI for Self-Healing Microgrids - Real-Time Fault Detection, Load Forecasting & Autonomous Energy Management
+                            </p>
+                        </div>
+                        
+                        <div class="border-l-4 border-blue-600 pl-4">
+                            <h4 class="font-bold text-lg text-gray-800">M.Tech in Power Electronics</h4>
+                            <p class="text-blue-600 font-semibold">SASTRA University | 2011</p>
+                            <p class="text-gray-600 mt-2">
+                                Specialized in power electronics, control systems, and renewable energy integration.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-4 rounded-lg mt-4">
+                            <h4 class="font-bold text-gray-800 mb-2 flex items-center">
+                                <i class="fas fa-file-alt text-purple-600 mr-2"></i>
+                                Publication
+                            </h4>
+                            <p class="text-gray-700">
+                                <strong>Five-Phase Pulse Width Modulator</strong><br>
+                                IEEE Publication | M.Tech Project, SASTRA University (2011)<br>
+                                <span class="text-sm text-gray-600">Advanced PWM techniques for multi-phase power electronic systems</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white section-appear">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Get in Touch</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Interested in collaboration, discussing research ideas, or learning more about my work? Feel free to reach out!
+            </p>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Contact Info -->
+                    <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-envelope text-purple-600 text-xl"></i>
+                                <div>
+                                    <p class="text-sm text-gray-600">Email</p>
+                                    <p class="font-semibold text-gray-800">shameer.sdb@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-university text-purple-600 text-xl"></i>
+                                <div>
+                                    <p class="text-sm text-gray-600">Institution</p>
+                                    <p class="font-semibold text-gray-800">VIT Chennai</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-map-marker-alt text-purple-600 text-xl"></i>
+                                <div>
+                                    <p class="text-sm text-gray-600">Location</p>
+                                    <p class="font-semibold text-gray-800">Chennai, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Connect on Social Media</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center hover:bg-purple-700 transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center hover:bg-green-700 transition">
+                                    <i class="fab fa-researchgate"></i>
+                                </a>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-4">
+                                <i class="fas fa-info-circle mr-1"></i>
+                                Update these links with your actual profiles
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Research Interests Card -->
+                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Research Collaboration</h3>
+                        
+                        <p class="text-gray-700 mb-6">
+                            I'm particularly interested in collaborating on:
+                        </p>
+                        
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Federated learning for distributed energy systems</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Physics-informed neural networks for power systems</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Edge AI deployment on resource-constrained devices</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Real-time microgrid fault detection and self-healing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Digital twins for smart grid applications</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-8 p-4 bg-white rounded-lg">
+                            <p class="text-sm text-gray-600 italic">
+                                "Bridging the gap between theoretical AI research and practical deployment on edge devices for sustainable energy solutions."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">&copy; 2026 Shameerddin Shaik. All rights reserved.</p>
+            <p class="text-sm opacity-90">PhD Scholar | Edge-AI for Self-Healing Microgrids | VIT Chennai</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#about" class="hover:text-gray-200 transition">About</a>
+                <a href="#research" class="hover:text-gray-200 transition">Research</a>
+                <a href="#developments" class="hover:text-gray-200 transition">Developments</a>
+                <a href="#workflow" class="hover:text-gray-200 transition">Workflow</a>
+                <a href="#projects" class="hover:text-gray-200 transition">Projects</a>
+                <a href="#contact" class="hover:text-gray-200 transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.section-appear').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Active navigation highlight
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('border-b-2');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('border-b-2');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
